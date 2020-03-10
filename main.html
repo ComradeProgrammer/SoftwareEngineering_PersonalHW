@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>日程</title>
+        <link rel="stylesheet" type="text/css" href="style/header.css">
+        <link rel="stylesheet" type="text/css" href="style/item.css">
+        <link rel="stylesheet" type="text/css" href="style/main.css">
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+    <body id="main_body" onload=" bodyOnload();">
+        <iframe src="header.html" class="header" scrolling="no" id="main_header"></iframe>
+        <div id="left_bar">
+            <div class="left_bar_button" id="left1" onclick="typeButtonOnClick('today',this);">今 日 日 程</div>
+            <div class="left_bar_button" id="left2" onclick="typeButtonOnClick('all',this);">全 部 日 程</div>
+            <div class="left_bar_button" id="left3" onclick="typeButtonOnClick('before',this);">已 过 期 日 程</div>
+            <div class="left_bar_button" id="left4" onclick="typeButtonOnClick('after',this);">未 过 期 日 程</div>
+            <div id="left_bar_information">
+                <div id="greetings" class="left_information_item" style="text-align: center;">你好，XXX</div>
+                <div id="date" class="left_information_item" style="text-align: center;">今天是2020-3-7</div>
+                <div id="agenda_today" class="left_information_item">今日日程数</div>
+                <div id="agenda_all" class="left_information_item">今日日程数</div>
+                <div id="agenda_past" class="left_information_item">今日日程数</div>
+                <div id="agenda_future" class="left_information_item">今日日程数</div>
+            </div>
+        </div>
+        <div id="right_bar">
+            <div id="operation_bar" >
+                <div class="icon_button" onclick="createAgenda();">
+                    <img class="icon" src="image/create.png">新建
+                </div>
+                <div class="icon_button" style="float: right;">
+                    <img class="icon" src="image/search.png">搜索
+                </div>
+                <input id="search">
+            </div>
+
+            <div id="agenda_items">
+                <!--iframe class="item" src="item.html" scrolling="no"></iframe-->
+            </div>
+        </div>
+    </body>
+
+    <script>
+        var iframe=document.getElementById("main_header");
+        iframe.onload=function(){
+            this.contentWindow.document.getElementById("inner_title").innerHTML="日程概览";
+        }
+    </script>
+</html>

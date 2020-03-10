@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style/login.css">
+        <link rel="stylesheet" type="text/css" href="style/header.css">
+        <title>登录</title>
+        <script type="text/javascript" src="js/login.js"></script>
+    </head>
+    <body id="login_page">
+        <iframe src="header.html" class="header" scrolling="no" id="login_header"></iframe>
+        <div id="login_box">
+            <div id="login_information">欢迎使用日程系统</br>如要继续请先使用账号密码登录</div>
+            <form id="login_form" method="POST" action="php/login.php">
+                <input name="username" class="login_input" placeholder="账户">
+                <input name="password" class="login_input" type="password" placeholder="密码">
+                <input type="submit" value="登录" class="login_button">
+                <button type="button" class="login_button" onclick="register_onclick()">新用户注册</button>
+            </form>
+        </div>
+    </body>
+   
+</html>
+<script>
+    var iframe=document.getElementById("login_header");
+    iframe.onload=function(){
+        this.contentWindow.document.getElementById("inner_title").innerHTML="登录";
+    }
+</script>

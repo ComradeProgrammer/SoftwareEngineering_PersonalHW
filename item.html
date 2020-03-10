@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css">
+            .item_box{
+                width:100%;
+                height:76px;
+                background-color:#1e1e1e;
+                padding:0;
+                margin:0;
+                display: block;
+            }
+            .item_box:before{
+                content: '.';
+                display:block;
+                height:0;
+                visibility:hidden;
+            }
+            .item_upper{
+                width:100%;
+                height:38px;
+                padding:0;
+                margin:0;
+            }
+            #item_date{
+                width:150px;
+                height:38px;
+                padding:0;
+                margin:0;
+                text-align: left;
+                color:#bbbbbb;
+                font-size: 25px;
+                display: inline-block;
+            }
+            #item_title{
+                width:auto;
+                height:38px;
+                padding:0;
+                margin:0;
+                text-align: left;
+                color:#bbbbbb;
+                font-size: 25px;
+                display: inline-block;
+            }
+            .item_operation_bar{
+                width:80px;
+                height:38px;
+                padding:0;
+                margin:0;
+                float:right;
+            }
+            .item_operation_button{
+                float:right;
+                height:38px;
+                width:38px;
+                margin-left:2px;
+            }
+            .item_lower{
+                width:100%;
+                height:38px;
+                padding:0;
+                margin:0;
+                color:#bbbbbb;
+                font-size: 15px;
+                word-wrap: break-word;
+                overflow: hidden;
+            }
+            #item_id{
+                float:right;
+                color:#bbbbbb;
+                font-size:15px;
+            }
+        </style>
+    </head>
+
+    <body style="padding:0;margin:0;font-size:0;display:block;">
+        <div class="item_box">
+            <div class="item_upper">
+                <div id="item_date">2010-01-01</div>
+                <div id="item_title">Title</div>
+                <div class="item_operation_bar">
+                    <img src="image/edit.png" class="item_operation_button" id="item_edit" onclick="window.parent.editAgenda(document.getElementById('item_id').innerHTML);">
+                    <img src="image/delete.png" class="item_operation_button" id="item_delete" onclick="window.parent.deleteAgenda(document.getElementById('item_id').innerHTML);">
+                </div>
+                <div id="item_id"></div>
+                <div style="float:right;color:#bbbbbb;font-size:15px;">流水号</div>
+            </div>
+            <div id="item_description" class="item_lower">Description</div>
+        </div>
+    </body>
+</html>

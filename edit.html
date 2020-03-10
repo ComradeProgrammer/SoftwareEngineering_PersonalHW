@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style/header.css">
+        <link rel="stylesheet" type="text/css" href="style/edit.css">
+        <script type="text/javascript" src="js/edit.js"></script>
+        <title>详细信息</title>
+    </head>
+    <body id="edit_body" onload="pre_load();">
+        <iframe src="header.html" class="header" scrolling="no"></iframe>
+        <div id="edit_context">
+            <form method="post" action="php/edit.php">
+                <div class="edit_header" id="date_frame">日程日期</div><input name="date" class="edit_single_input"  id="agenda_date" oninput="dateCheck(this);">格式：YYYY-MM-DD<br/>
+                <div class="edit_header">标题</div><input name="title" class="edit_single_input" id="agenda_title"><br/>
+                <div class="edit_header" style="vertical-align: top;">内容</div><textarea name="note" class="edit_single_input" rows="5" style="height:200px; width:60%" id="agenda_detail"></textarea><br/>
+                <input style="display:none" name="type" id="agenda_type">
+                <input style="display:none" name="id" id="agenda_id">
+                <input  style="display:none" id="hidden_submit" type="submit">
+                <div id="edit_operation">
+                    <button type="button" class="edit_button" onclick="checkandSubmit()">
+                        <img src="image/save.png" class="edit_button_img">保存
+                    </button>
+                    <button type="button" class="edit_button" onclick="abortEdit();">
+                        <img src="image/abort.png" class="edit_button_img" >放弃
+                    </button>
+                </div>
+            </form>
+        </div>
+    </body>    
+</html>

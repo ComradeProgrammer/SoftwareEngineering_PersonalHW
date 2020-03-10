@@ -1,0 +1,60 @@
+#edit_body{
+    background-color:black;
+    margin:0;
+    padding:0; 
+}
+#edit_context{
+    width:80%;
+    height:450px;
+    background-color: #1e1e1e;
+    margin: 0 auto;
+    color:#bbbbbb;
+    font-size:25px;
+    vertical-align: top;
+}
+
+.edit_header{
+    width:100px;
+    height:40px;
+    display: inline-block;
+    margin:5px;
+}
+.edit_single_input{
+    margin:5px;
+    background-color:black;
+    height:40px;
+    color:#bbbbbb;
+    font-size:25px;
+    border:2px solid #363636;
+}
+#edit_operation{
+    margin-top: 30px;
+    height:60px;
+    width:80%;
+    vertical-align: bottom;
+}
+
+.edit_button{
+    width:30%;
+    height:44px;
+    display: inline-block;
+    margin:0;
+    padding:0;
+    border:2px solid #bbbbbb;
+    vertical-align: middle;
+    color:#bbbbbb;
+    font-size: 30px;
+    text-align: left;
+    background-color: #1e1e1e;
+    vertical-align: bottom;
+}
+
+.edit_button_img{
+    height:40px;
+    width:40px;
+    display: inline-block;
+    margin:0;
+    padding:0;
+    border:none;
+    vertical-align: bottom;
+}

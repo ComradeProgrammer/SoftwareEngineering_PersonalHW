@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style/header.css">
+        <link rel="stylesheet" type="text/css" href="style/register.css">
+        <title>注册</title>
+        <script type="text/javascript" src="js/register.js"></script>
+    </head>
+    <body id="register_page">
+        <iframe src="header.html" class="header" scrolling="no" id=register_header></iframe>
+        <div id="register_box">
+            <div id="register_information">填写以下信息以完成注册</div>
+            <form id="register_form" method="POST" action="php/register.php">
+                    <div class="register_title">帐户名</div>
+                    <input id="username" name="username" class="register_input" oninput="check_username_validity()" >
+                    <img src="image/no.png"  id="username_status" class="status_img">
+                    <div class="alert_information" id="alert_username"></div>
+
+                    <div class="register_title">密码</div>
+                    <input id="password" name="password" class="register_input" type="password" oninput="check_password()">
+                    <img src="image/no.png"  id="password_status" class="status_img">
+                    <div class="alert_information" id="alert_password"></div>
+
+                    <div class="register_title">确认密码</div>
+                    <input id="confirm_password" name="confirm_password" class="register_input" type="password"  oninput="check_repassword()">
+                    <img src="image/no.png"  id="repassword_status" class="status_img">
+                    <div class="alert_information" id="alert_confirm_password"></div>
+                    <button type="button" id="register_button" onclick="register()">建立账户</button>
+                    <input type="submit" value="建立账户" id="hidden_button" style="display:none" >
+            </form>
+        </div>
+    </body>
+</html>
+<script>check_password();check_repassword();check_username_validity()</script>
+<script>
+    var iframe=document.getElementById("register_header");
+    iframe.onload=function(){
+        this.contentWindow.document.getElementById("inner_title").innerHTML="注册";
+    }
+</script>
