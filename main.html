@@ -26,13 +26,15 @@
         </div>
         <div id="right_bar">
             <div id="operation_bar" >
+                <form method="GET" action="searchresult.html">
                 <div class="icon_button" onclick="createAgenda();">
                     <img class="icon" src="image/create.png">新建
                 </div>
-                <div class="icon_button" style="float: right;">
-                    <img class="icon" src="image/search.png">搜索
-                </div>
-                <input id="search">
+                <button type="submit" class="icon_button" style="float: right; background-color:#1e1e1e;">
+                    <img class="icon" src="image/search.png" style="vertical-align:top ;height:24px; width:24px">搜索
+                </button>
+                <input id="search" name="key">
+                </form>
             </div>
 
             <div id="agenda_items">

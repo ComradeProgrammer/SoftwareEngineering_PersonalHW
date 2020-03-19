@@ -1,0 +1,22 @@
+#result_body{
+    background-color:black;
+    margin:0;
+    padding:0;
+}
+
+#center_bar{
+    background-color:#1e1e1e;
+    border:2px solid #bbbbbb;
+    margin: 0 auto;
+    width:60%;
+    min-height:500px;
+    height:auto;
+}
+#briefing{
+    width:60%;
+    height:20px;
+    margin: 0 auto;
+    font-size: 15px;
+    text-align: center;
+    color:#bbbbbb;
+}

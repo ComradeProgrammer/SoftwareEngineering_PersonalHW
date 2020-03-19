@@ -41,7 +41,7 @@ function checkandSubmit(){
     var bundle=parseGET();
     if(bundle==null||bundle["type"]==null){
         alert("错误:请求类型非法");
-        window.window.location.replace("login.html");
+        window.location.href="login.html";
     }
     if(bundle["type"]=="create"){
         type.value="create"
@@ -51,7 +51,7 @@ function checkandSubmit(){
         type.value="edit"
         if(bundle["id"]==null || isNaN(bundle["id"])){
             alert("错误:请求类型非法");
-            window.location.replace("login.html");
+            window.location.href="login.html";
         }
         else{
             id.value=bundle["id"];
@@ -59,13 +59,13 @@ function checkandSubmit(){
     }
     else{
         alert("错误:请求类型非法");
-        window.location.replace("login.html");
+        window.location.href="login.html";
     }
     document.getElementById("hidden_submit").click();
 }
 
 function abortEdit(){
-    window.location.replace("main.html");
+    window.location.href="main.html";
 }
 
 function pre_load(){
@@ -73,7 +73,7 @@ function pre_load(){
     var bundle=parseGET();
     if(bundle==null||bundle["type"]==null){
         alert("错误:请求类型非法");
-        window.window.location.replace("login.html");
+        window.location.href="login.html";
     }
     if(bundle["type"]=="create"){
         return;
@@ -81,7 +81,7 @@ function pre_load(){
     else if(bundle["type"]=="edit"){
         if(bundle["id"]==null || isNaN(bundle["id"])){
             alert("错误:请求类型非法");
-            window.location.replace("login.html");
+            window.location.href="login.html";
         }
         else{
             agenda_id=bundle["id"];
@@ -89,7 +89,7 @@ function pre_load(){
     }
     else{
         alert("错误:请求类型非法");
-        window.location.replace("login.html");
+        window.location.href="login.html";
     }
     var xmlhttp=new XMLHttpRequest();
     xmlhttp.onreadystatechange=function(){
@@ -101,7 +101,7 @@ function pre_load(){
                 var respond=JSON.parse(this.responseText);
                 if(respond.correcct==false){
                     alert("错误请求");
-                    window.location.replace("main.html");
+                    window.location.href="login.html";
                 }
                 else{
                     document.getElementById("agenda_date").value=respond.date;

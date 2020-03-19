@@ -23,7 +23,7 @@ function updateInformation(){
                 var respond=JSON.parse(this.responseText);
                 if(respond.username==""){
                     alert("登录过期，请重新登录");
-                    window.location.replace("login.html");
+                    window.location.href="login.html";
                 }
                 else{
                     document.getElementById("greetings").innerHTML="你好"+respond.username;
@@ -73,7 +73,7 @@ function typeButtonOnClick(type,button){
                 var respond=JSON.parse(this.responseText);
                 if(respond.username==""){
                     alert("登录过期，请重新登录");
-                    window.location.replace("login.html");
+                    window.location.href="login.html";
                 }
                 else{
                     var items=document.getElementById("agenda_items");
@@ -95,13 +95,13 @@ function bodyOnload(){
 }
 
 function createAgenda(){
-    window.location.replace("edit.html?type=create")
+    window.location.href="edit.html?type=create";
 }
 
 function editAgenda(agenda_id){
-    window.location.replace("edit.html?type=edit&id="+agenda_id);
+    window.location.href="edit.html?type=edit&id="+agenda_id;
 }
 
 function deleteAgenda(agenda_id){
-    window.location.replace("php/delete.php?id="+agenda_id);
+    window.location.href="php/delete.php?id="+agenda_id;
 }

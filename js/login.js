@@ -12,5 +12,5 @@ function autoAdjustSize(){
 }
 
 function register_onclick(){
-    window.location.replace("register.html")
+    window.location.href="register.html";
 }
