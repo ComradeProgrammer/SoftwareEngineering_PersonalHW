@@ -16,4 +16,11 @@
             <!--iframe class="item" src="item.html" scrolling="no" style="margin:0 2%"></iframe-->
         </div>
     </body>
+
+    <script>
+        var iframe=document.getElementById("main_header");
+        iframe.onload=function(){
+            this.contentWindow.document.getElementById("inner_title").innerHTML="搜索";
+        }
+    </script>
 </html>

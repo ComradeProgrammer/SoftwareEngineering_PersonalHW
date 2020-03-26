@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>一键安装</title>
+        <link rel="stylesheet" type="text/css" href="../style/header.css">
+        <link rel="stylesheet" type="text/css" href="install.css">
+    </head>
+
+    <body id="install_body">
+        <iframe src="../header.html" class="header" scrolling="no" id="main_header"></iframe>
+            <div class="install_frame" style="font-size: 20px;">
+                <div style="text-align: center; font-size: 30px;">部署说明文档</div>
+                本项目需要有<strong><span style="color:red">php7</span></strong>+ mysql8的支持。在配置好环境之后，依照下面的步骤进行快速配置<br><br>
+                第一步：如有必要，为本项目新建一个mysql账户，你也可以选择直接使用root账户<br><br>
+                第二步：为这个账户中新建一个数据库(SCHEMA)，并授予该账户对这个数据库的ALL权限<br><br>
+                第三步：点击下面的按钮，在接下来的页面中，输入mysql账户和数据库的配置信息，完成配置<br><br>
+                <div style="width:100%;text-align: center;"> 
+                    <button type="submit" class="edit_button" type="button" onclick="window.location.href='install.html'">
+                        <img src="../image/save.png" class="edit_button_img">下一步
+                    </button>
+                </div>
+            </div>
+            
+    </body>
+    <script>
+        var iframe=document.getElementById("main_header");
+        iframe.onload=function(){
+            this.contentWindow.document.getElementById("inner_title").innerHTML="安装-Phase 1";
+        }
+    </script>
+</html>

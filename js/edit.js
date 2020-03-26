@@ -1,3 +1,6 @@
+function trim(str){
+    return str.replace(/(^\s*)|(\s*$)/g, "");  
+}
 function parseGET(){
     var str=window.location.search;
     var length=str.length;

@@ -1,6 +1,8 @@
 window.onload=autoAdjustSize;
 window.onresize=autoAdjustSize;
-
+function trim(str){
+    return str.replace(/(^\s*)|(\s*$)/g, "");  
+}
 function autoAdjustSize(){
     var width=window.innerWidth;
     var login_box=document.getElementById("register_box");

@@ -1,0 +1,50 @@
+#install_body{
+    background-color:black;
+    margin:0;
+    padding:0;
+}
+
+.install_frame{
+    width:60%;
+    height:400px;
+    margin:0 auto;
+    border: 2px solid #bbbbbb;
+    background-color:#1e1e1e;
+    font-size: 25px;
+    color: #bbbbbb;
+}
+
+.install_input{
+    background-color:black;
+    height:40px;
+    color:#bbbbbb;
+    font-size:25px;
+    border:2px solid #363636;
+    width:80%;
+    margin:10px 0;
+}
+
+.edit_button{
+    width:60%;
+    height:44px;
+    display: inline-block;
+    margin:0 auto;
+    padding:0;
+    border:2px solid #bbbbbb;
+    vertical-align: middle;
+    color:#bbbbbb;
+    font-size: 30px;
+    text-align: middle;
+    background-color: #1e1e1e;
+    vertical-align: bottom;
+}
+
+.edit_button_img{
+    height:39px;
+    width:39px;
+    display: inline-block;
+    margin:0;
+    padding:0;
+    border:none;
+    vertical-align: bottom;
+}

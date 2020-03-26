@@ -1,3 +1,6 @@
+function trim(str){
+    return str.replace(/(^\s*)|(\s*$)/g, "");  
+}
 
 function editAgenda(agenda_id){
     window.location.href="edit.html?type=edit&id="+agenda_id;
